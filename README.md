@@ -1,5 +1,5 @@
-# neovim-plugin-starter
-Neovim plugin template
+# code-assist.nvim
+Neovim plugin for coding.
 
 
 ```bash
