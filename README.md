@@ -1,3 +1,3 @@
 # alpha.nvim
 
-Neovim plugin for coding.
+A simple Neovim plugin.

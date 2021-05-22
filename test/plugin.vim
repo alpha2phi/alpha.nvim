@@ -31,7 +31,9 @@ call plug#begin('~/.mynvim/plugged')
 Plug 'tpope/vim-sensible'
 
 " Local plugins
-Plug '~/workspace/development/alpha2phi/alpha.nvim'
+" Plug '~/workspace/development/alpha2phi/alpha.nvim'
 
+" Plugin testing - install from Github
+Plug 'alpha2phi/alpha.nvim'
 
 call plug#end()
