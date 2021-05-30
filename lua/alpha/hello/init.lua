@@ -1,3 +1,3 @@
-local hello = require('hello.helloworld')
+local hello = require('alpha.hello.helloworld')
 
 return hello

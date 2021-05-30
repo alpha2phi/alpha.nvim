@@ -1,4 +1,3 @@
--- from plenary.nvim
 local reload = {}
 
 reload.reload_module = function(module_name, starts_with_only)

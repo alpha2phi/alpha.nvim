@@ -1,2 +1,5 @@
-local main = require("alpha.main")
-local config = require("alpha.config")
+-- Debugging dump
+function _G.dump(...)
+    local objects = vim.tbl_map(vim.inspect, {...})
+    print(unpack(objects))
+end
