@@ -11,9 +11,16 @@ function! Reload(module_name) abort
     lua require("alpha")
 endfunction
 
+augroup AlphaAuGrp
+    autocmd!
+    " autocmd VimResized * :lua require("alpha.utils").onResize()
+augroup END
+
+
 " Reload the plugin
-nnoremap <Leader>prr :call Reload("alpha") <bar> lua require("alpha.vimspector").createFloatingWindow() <CR>
+nnoremap <Leader>prr :call Reload("alpha") <bar> lua require("alpha.vimspector").generateDebugProfile() <CR>
 nnoremap <Leader>prt :Luapad<CR>
 nnoremap <Leader>pre :LuaRun<CR>
 nnoremap <Leader>prs :source %<CR>
 nnoremap <Leader>prl :luafile %<CR>
+nnoremap <Leader>prm :messages<CR>

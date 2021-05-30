@@ -1,4 +1,4 @@
-function! alpha#health#check()
+function! health#alpha#check()
     if !has('nvim-0.5')
         call health#report_warn("please install nvim > 0.5")
     else

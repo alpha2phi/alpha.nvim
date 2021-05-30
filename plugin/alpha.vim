@@ -4,7 +4,7 @@ let s:save_cpo = &cpo
 set cpo&vim          
 
 " command to run our plugin
-command! AlphaHelloWorld lua require("hello").sayHelloWorld()
+command! AlphaDebugProfile lua require("alpha.vimspector").generateDebugProfile()
 
 " expose vim commands and interface here
 " nnoremap <Plug>PlugCommand :lua require(...).plug_command()<CR>
