@@ -27,18 +27,18 @@ function v.generateDebugProfile()
 
     if ft == "python" then
         -- Get Python path
-        local python3 = vim.fn.exepath("python3")
+        local python3 = vim.fn.exepath("python")
         local debugProfile = string.format(vimspectorPython, python3)
 
         -- Generate debug profile in a new window
-        vim.api.nvim_exec('vnew', true)
+        vim.api.nvim_exec('vsp', true)
         local win = vim.api.nvim_get_current_win()
         local bufNew = vim.api.nvim_create_buf(true, false)
         vim.api.nvim_buf_set_name(bufNew, ".vimspector.json")
         vim.api.nvim_win_set_buf(win, bufNew)
 
         lines = {}
-        for s in vimspectorPython:gmatch("[^\r\n]+") do
+        for s in debugProfile:gmatch("[^\r\n]+") do
             table.insert(lines, s)
         end
         vim.api.nvim_buf_set_lines(bufNew, 0, -1, false, lines)
